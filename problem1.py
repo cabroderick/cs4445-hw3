@@ -88,7 +88,7 @@ def load_webpages(filename):
 def count_word_frequency(X, keyword):
     #########################################
     ## INSERT YOUR CODE HERE (5 points)
-    X = X.append(X.loc('Description').str())
+    X = X.append(X['Description'].str.lower().str.count(keyword))
     #########################################
     return X
     #-----------------
