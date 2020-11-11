@@ -88,7 +88,7 @@ def load_webpages(filename):
 def count_word_frequency(X, keyword):
     #########################################
     ## INSERT YOUR CODE HERE (5 points)
-    X = X.append(X['Description'].str.lower().str.count(keyword))
+    X['Count'] = X['Description'].str.lower().str.count(keyword)
     #########################################
     return X
     #-----------------
@@ -121,7 +121,7 @@ def count_word_frequency(X, keyword):
 def rank_word_frequency(X1):
     #########################################
     ## INSERT YOUR CODE HERE (5 points)
-
+    R1 = X1.sort_values(by='Count', ascending=False)
     #########################################
     return R1
     #-----------------
