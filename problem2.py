@@ -199,7 +199,7 @@ def mat_scalar_multiplication(X, a):
     #-----------------
     '''
         TEST: Now you can test the correctness of your code above by typing the following in the terminal:
-        ---------------------------------------------------
+        ---------------------------------------------#NOT COMPLETED------
         python3 -m nose -v test2.py:test_mat_scalar_multiplication
 	OR
         nosetests -v test2.py:test_mat_scalar_multiplication
@@ -263,7 +263,7 @@ def matrix_vector_multiplication(X, y):
 def find_zeros(x):
     #########################################
     ## INSERT YOUR CODE HERE (3 points)
-    d = np.where(x==0) #NOT COMPLETED
+    d = np.where(x==0)[0]
     #########################################
     return d
     #-----------------
@@ -297,7 +297,7 @@ def find_zeros(x):
 def diag_mat(x):
     #########################################
     ## INSERT YOUR CODE HERE (2 points)
-
+    D = np.diag(x)
     #########################################
     return D
     #-----------------
