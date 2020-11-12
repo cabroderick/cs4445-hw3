@@ -27,7 +27,7 @@ import pandas as pd
 def count_out_links(A):
     #########################################
     ## INSERT YOUR CODE HERE (5 points)
-    
+    d = np.sum(A, axis=0)
     #########################################
     return d
     #-----------------
@@ -56,7 +56,11 @@ def count_out_links(A):
 def remove_sink_nodes(A):
     #########################################
     ## INSERT YOUR CODE HERE (5 points)
-    
+    idx = np.argwhere(np.all(A[..., :] == 0, axis = 0)) #NOT COMPLETED
+    print(idx[0])
+    for i in range(idx[0]):
+        print(A[i])
+    print(A)
     #########################################
     return A
     #-----------------
